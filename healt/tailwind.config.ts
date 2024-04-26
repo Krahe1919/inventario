@@ -19,9 +19,21 @@ const config: Config = {
         'custom-blues': '#67e8f9',
         'sena-blue': '#0c4a6e'
       },
+      keyframes: {
+        showContent: {
+          to: {
+            transform: "translateY(0)",
+            filter: "blur(0)",
+            opacity: "1",
+          },
+        },
+      },
+      animation: {
+        "show-Content": "showContent 0.5s 0.7s ease-in-out 1 forwards ",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-animation-delay")],
 };
 
 export default config;
