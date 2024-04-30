@@ -10,7 +10,6 @@ import { IoSettings } from "react-icons/io5";
 import { FaPowerOff } from "react-icons/fa";
 import { RiCheckboxBlankCircleFill } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
-import { IoNotifications } from "react-icons/io5";
 
 
 export const Sidebar = () => {
@@ -22,8 +21,7 @@ export const Sidebar = () => {
 
 
     return (
-        <div className="">
-            <div className={`bg-gray-100 fixed top-0 w-80 h-full overflow-y-scroll border-r border-gray-300 p-8 flex flex-col justify-between transition-all lg:left-0 ${showMenu ? "left-0" : "-left-full"}`}>
+            <div className={`xl:h-[100vh] overflow-y-scroll fixed xl:static bg-gray-200 w-80 border-r border-gray-300 h-full -left-full top-0 p-8 z-50 flex flex-col justify-between transition-all ${showMenu ? "left-0" : "-left-full"}`}>
                 <div>
                     {/*LOGO*/}
                     <h1 className='uppercase font-bold text-2xl tracking-[5px] mb-10 text-sena-blue'>
@@ -75,29 +73,6 @@ export const Sidebar = () => {
 
                         {showMenu ? <IoClose/> : <FiAlignRight/>}
                     </button>
-
             </div>
-            <header className='fixed pl-[340px] w-full flex items-start justify-between p-8 border border-gray-300'>
-                <nav className='space-x-6 '>
-                    <Link href={"#"} className="inline-block relative transition-colors duration-300 hover:before:w-full">
-                        <span className="before:absolute before:left-0 before:-bottom-2 before:w-0 before:h-0.5 before:bg-sena-blue before:rounded-full before:transition-all before:duration-300 hover:before:w-full">Discover</span>
-                    </Link>
-                    <Link href={"#"} className="inline-block relative transition-colors duration-300 hover:before:w-full">
-                        <span className="before:absolute before:left-0 before:-bottom-2 before:w-0 before:h-0.5 before:bg-sena-blue before:rounded-full before:transition-all before:duration-300 hover:before:w-full">Arrive</span>
-                    </Link>
-                    <Link href={"#"} className="inline-block relative transition-colors duration-300 hover:before:w-full">
-                        <span className="before:absolute before:left-0 before:-bottom-2 before:w-0 before:h-0.5 before:bg-sena-blue before:rounded-full before:transition-all before:duration-300 hover:before:w-full">Fantasma</span>
-                    </Link>
-                </nav>
-                <ul>
-                    <li className='text-lg'>
-                        <a href="#" className='text-sena-blue'>
-                            {""}
-                            <IoNotifications/>
-                        </a>
-                    </li>
-                </ul>
-            </header>
-        </div>
     );
 }; 
